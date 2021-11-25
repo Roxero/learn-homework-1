@@ -17,7 +17,7 @@
 
 
 def parse_strings(first_str, second_str):
-    if type(first_str) != str or type(second_str) != str:
+    if not isinstance(first_str, str) or not isinstance(second_str, str):
         return 0
     if first_str == second_str:
         return 1

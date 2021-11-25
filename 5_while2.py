@@ -29,10 +29,8 @@ def ask_user(answers_dict):
 		if question == 'Пока':
 			print('Ну, пока')
 			break
-		if question.strip() in questions_and_answers:
-			print(questions_and_answers[question])
-		else:
-			print('Не знаю. Другой вопрос, пожалуйста')
-
+		answer = questions_and_answers.get(question, 'Не знаю. Другой вопрос, пожалуйста')
+		print(answer)
+		
 if __name__ == "__main__":
     ask_user(questions_and_answers)
