@@ -17,7 +17,11 @@
 
 
 def parse_strings(first_str, second_str):
+<<<<<<< HEAD
     if not isinstance(first_str, str) or not isinstance(second_str, str):
+=======
+    if type(first_str) != str or type(second_str) != str:
+>>>>>>> 7b1c9e40ed51e4fd47ff6c4d3f06ec703dbf72e3
         return 0
     if first_str == second_str:
         return 1

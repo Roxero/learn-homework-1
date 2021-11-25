@@ -30,12 +30,22 @@ def main():
 	print('-' * 20)
 
 	for product in sell_data:
+<<<<<<< HEAD
 		average_sold = sum(product['items_sold']) / len(product['items_sold'])
 		print(product['product'], ': Average sold:', round(average_sold, 2))
 
 	print('-' * 20)
 
 	counter = sum(sum(product['items_sold']) for product in sell_data)
+=======
+		print(product['product'], ': Average sold:', round(sum(product['items_sold']) / len(product['items_sold']), 2))
+
+	print('-' * 20)
+
+	counter = 0
+	for product in sell_data:
+		counter +=  sum(product['items_sold'])
+>>>>>>> 7b1c9e40ed51e4fd47ff6c4d3f06ec703dbf72e3
 	print('Total overall sold:', counter, 'items')
 
 	print('-' * 20)
