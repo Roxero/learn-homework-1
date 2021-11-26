@@ -21,7 +21,7 @@ def main():
 	sell_data =   [
 		{'product': 'iPhone 12', 'items_sold': [363, 500, 224, 358, 480, 476, 470, 216, 270, 388, 312, 186]}, 
 		{'product': 'Xiaomi Mi11', 'items_sold': [317, 267, 290, 431, 211, 354, 276, 526, 141, 453, 510, 316]},
-		{'product': 'Samsung Galaxy 21', 'items_sold': [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247]},
+		{'product': 'Samsung Galaxy 21', 'items_sold': [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247]}
   	]
 
 	for product in sell_data:
@@ -35,7 +35,7 @@ def main():
 
 	print('-' * 20)
 
-	counter = sum(sum(product['items_sold']) for product in sell_data)
+	counter = sum(subsumm for subsumm in [sum(product['items_sold']) for product in sell_data])
 	print('Total overall sold:', counter, 'items')
 
 	print('-' * 20)
