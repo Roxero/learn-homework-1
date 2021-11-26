@@ -19,9 +19,9 @@ def discounted(price, discount, max_discount=20):
         discount = abs(float(discount))
         max_discount = abs(int(max_discount))
     except (ValueError, TypeError):
-        return 'Неверные входные данные'
+        raise 'Неверные входные данные'
     if max_discount >= 100:
-        return 'Слишком большая максимальная скидка'
+        raise 'Слишком большая максимальная скидка'
     if discount >= max_discount:
         return price
     else:
