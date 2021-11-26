@@ -17,7 +17,6 @@
 def guess_business(age):
     try:
         age = int(age)
-<<<<<<< HEAD
     except (ValueError, TypeError):
         return 'Wrong age'
     if 0 < age < 7:
@@ -30,20 +29,6 @@ def guess_business(age):
         return 'Job'
     else:
         return 'Wrong age'
-=======
-        if 0 < age < 7:
-            return 'Kindergarten'
-        elif 7 <= age <= 17:
-            return 'School'
-        elif 18 < age < 23:
-            return 'University'
-        elif age >= 23:
-            return 'Job'
-        else:
-            raise ValueError('Wrong age')
-    except (ValueError, TypeError):
-        return 'Wrong age'
->>>>>>> 7b1c9e40ed51e4fd47ff6c4d3f06ec703dbf72e3
 
 def main():
     age = input('Enter your age: ')
